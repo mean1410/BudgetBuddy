@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Budget Buddy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img src="assets/logo.png" alt="Budget Buddy Logo" width="30"> Budget Buddy</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+  <main>
+    <div class="form-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Username: <input type="text" id="loginUser" required></label>
+        <label>Password: <input type="password" id="loginPass" required></label>
+        <p class="forgot-password"><a href="forgot.html">Forgot Password?</a></p>
+        <button type="submit">Log In</button>
+        <p id="loginMsg" class="message"></p>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Budget Buddy. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

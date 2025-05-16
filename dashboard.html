@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Budget Buddy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1><a href="indexlogged.html"><img src="assets/logo.png" alt="Budget Buddy Logo" width="30"> Budget Buddy</a></h1>
+    <nav>
+      <a href="indexlogged.html">Home</a>
+      <a href="index.html">Log Out</a>
+    </nav>
+  </header>
+  <main class="dashboard-container">
+    <div class="form-container">
+      <h2>Add Transaction</h2>
+      <form id="transactionForm">
+        <label>Description: <input type="text" id="transDesc" required></label>
+        <label>
+          Category:
+          <select id="transCategory" required>
+            <option value="food">Food & Dining</option>
+            <option value="transport">Transportation</option>
+            <option value="bills">Bills & Utilities</option>
+            <option value="shopping">Shopping</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>Amount (RM): <input type="number" step="0.01" id="transAmount" required></label>
+        <label>Date: <input type="date" id="transDate" required></label>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </div>
+    <div class="form-container">
+      <h2>Set Monthly Income</h2>
+      <form id="budgetForm">
+        <label>Income (RM): <input type="number" id="monthlyBudget" required></label>
+        <button type="submit">Set Income</button>
+      </form>
+    </div>
+    <div class="form-container">
+      <h2>Financial Goals</h2>
+      <form id="goalsForm" class="inline-form">
+        <label>Saving Goal (RM): 
+          <input type="number" id="savingGoal" step="0.01" required>
+          <button type="submit" class="btn-small">Set Goal</button>
+        </label>
+      </form>
+      <div class="stat-item">
+        <span>Money Left to Reach Goal</span>
+        <span class="amount" id="remainingAmount">-</span>
+      </div>
+      <div class="stat-item">
+        <span>Current Income</span>
+        <span class="amount savings">RM0.00</span>
+      </div>
+      <div class="stat-item">
+        <span>Expenses</span>
+        <span class="amount expense">RM0.00</span>
+    </div>
+    <div class="stat-item">
+      <span>Budget Used</span>
+      <div class="progress-container">
+        <div class="progress-bar" id="budgetProgress"></div>
+        <span class="progress-text" id="budgetText">0%</span>
+    </div>
+    </div>
+      <div class="stat-item">
+        <span>Goal Progress</span>
+        <div class="progress-container">
+          <div class="progress-bar" id="savingsProgress"></div>
+          <span class="progress-text" id="savingsText">0%</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="transactions-header">
+        <h2>Recent Transactions</h2>
+        <button id="resetTransactions" class="btn-small btn-danger">Reset All</button>
+      </div>
+      <div id="transactionsList" class="transactions-list">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Budget Buddy. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
