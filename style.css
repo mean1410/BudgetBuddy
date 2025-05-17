@@ -74,20 +74,6 @@ footer {
   margin: 0 auto;
 }
 
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
 .dashboard-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -354,8 +340,10 @@ body:not(.no-bg)::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(assets/bg.jpg) center/cover;
-  filter: blur(5px);
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
   z-index: -2;
 }
 
@@ -475,7 +463,7 @@ form {
   width: 100%;
 }
 
-form.inline-form {
+.inline-form {
   flex-direction: row;
   align-items: center;
   gap: 10px;
@@ -744,7 +732,6 @@ form button[type="submit"] {
   text-decoration: none;
 }
 
-/* Form submit buttons */
 #transactionForm button[type="submit"],
 #budgetForm button[type="submit"],
 #incomeForm button[type="submit"] {
@@ -782,26 +769,6 @@ form button[type="submit"] {
   font-size: 14px;
   margin-left: 10px;
   width: auto;
-}
-
-.back-to-home {
-  display: inline-block;
-  background-color: #2e5d2e;
-  color: white;
-  padding: 14px 38px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 30px;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(46,93,46,0.13);
-}
-
-.back-to-home:hover {
-  background-color: #3c7f3c;
-  color: #fff;
-  text-decoration: none;
 }
 
 .dashboard-container {
@@ -925,7 +892,6 @@ input[type="submit"]:hover,
   text-decoration: none;
 }
 
-.back-to-home:hover,
 form button:hover,
 form button[type="submit"]:hover {
   background-color: #3c7f3c;
@@ -953,24 +919,6 @@ footer {
   align-items: center;
   gap: 20px;
   text-align: center;
-}
-
-.footer-links {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.footer-links a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 
 .time-greeting {
@@ -1030,4 +978,3 @@ footer {
 
 .income { color: #2e5d2e; }
 .expense { color: #ff4444; }
-.budget { color: #3c7f3c; }

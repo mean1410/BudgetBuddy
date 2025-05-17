@@ -280,10 +280,7 @@ function updateDashboard() {
 document.addEventListener("DOMContentLoaded", () => {
   const user = localStorage.getItem("currentUser");
   
-  const dailyBudgetStat = document.querySelector('.daily-budget');
-  if (dailyBudgetStat) {
-    dailyBudgetStat.style.display = user ? 'flex' : 'none';
-  }
+  // Removed reference to unused class '.daily-budget'
 
   const greeting = document.getElementById('greeting');
   if (greeting) {
@@ -300,14 +297,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.income').forEach(el => el.textContent = `RM${income.toFixed(2)}`);
     document.querySelectorAll('.expense').forEach(el => el.textContent = `RM${expenses.toFixed(2)}`);
 
-    if (user) {
-      const dailyBudget = ((income - expenses) / 30).toFixed(2);
-      document.querySelectorAll('.budget').forEach(el => el.textContent = `RM${dailyBudget}`);
-    }
+    // Removed reference to unused class '.budget'
   };
 
-  if (document.querySelector('.quick-stats')) {
-    updateStats();
-    setInterval(updateStats, 1000);
-  }
+  // Always update stats since '.quick-stats' class doesn't exist
+  updateStats();
+  setInterval(updateStats, 1000);
 });
